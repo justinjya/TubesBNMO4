@@ -18,6 +18,7 @@ def search_game_at_store(x):
     print("Daftar game pada toko yang memenuhi kriteria:")
 
     # Mengisi temporary array dengan data dalam game sesuai input id, nama, harga, kategori, dan tahun rilis
+    # x[i][0] yaitu game_id, x[i][1] yaitu nama, x[i][2], yaitu kategori, x[i][3] yaitu tahun rilis, x[i][4] yaitu harga, x[i][5] yaitu stok
     for i in range(length(x)):
         if id == '' or nama == '' or harga == '' or kategori == '' or tahun_rilis == '':
             if id == x[i][0]:
