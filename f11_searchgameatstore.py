@@ -48,4 +48,5 @@ def search_game_at_store(x):
             num[i] = i+1
         numSpaces(num)
         for i in range(length(temp)):
+            # temp[i][0] yaitu game_id, temp[i][1] yaitu nama, temp[i][2], yaitu kategori, temp[i][3] yaitu tahun rilis, temp[i][4] yaitu harga, temp[i][5] yaitu stok
             print(str(num[i]) + ' ' + temp[i][0] + ' | ' + temp[i][1] + ' | ' + temp[i][2] + ' | ' + temp[i][3] + ' | ' + temp[i][4] + ' | ' + temp[i][5])
