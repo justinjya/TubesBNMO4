@@ -16,8 +16,7 @@ def ubah_stok(x):
                 print('Stok x',x[i][1],'gagal dikurangi karena stok kurang. Stok sekarang: ',x[i][5], '(<',abs(tambah),')')
             else:
                 # Menambah stok
-                stok = int(x[i][5]) + tambah
-                x[i][5] = str(stok)
+                x[i][5] = str(int(x[i][5]) + tambah)
                 if tambah > 0:
                     print('Stok x', x[i][1],'berhasil ditambahkan. Stok sekarang: ',x[i][5])
                 else:
