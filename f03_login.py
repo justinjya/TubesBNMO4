@@ -5,10 +5,11 @@ def login(x):
     global user
     global user_id
     global role
-
+    # Input username dan password
     username_login = input('Masukkan username: ')
     password_login = input('Masukkan password: ')
 
+    # Validasi apakah username dan password sesuai dengan data
     for i in range(length(x)):
         if username_login == x[i][1] and password_login == x[i][3]:
             print('Halo ' + x[i][2] + '! Selamat datang di "Binomo".')
