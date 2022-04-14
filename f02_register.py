@@ -1,5 +1,6 @@
 from .functions import*
 
+# Fungsi register menerima parameter x yaitu variabel
 def register(x):
     global user
     
