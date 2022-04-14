@@ -3,14 +3,17 @@ from .functions import*
 def ubah_game(x):
     global game
 
+    # Input id, nama, kategori, tahun rilis, harga
     id = input('Masukkan ID game: ')
     nama = input('Masukkan nama game: ')
     kategori = input('Masukkan kategori: ')
     tahun_rilis = input('Masukkan tahun rilis: ')
     harga = input('Masukkan harga: ')
 
+    # Looping untuk mencari id apakah terdaftar dalam data
     for i in range(length(x)):
         if id == x[i][0]:
+            # Jika id terdaftar, maka merubah data sesuai input
             if nama != '':
                 x[i][1] = nama
             if kategori != '':
