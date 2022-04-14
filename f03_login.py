@@ -1,5 +1,6 @@
 from .functions import*
 
+# Fungsi login menerima parameter x yaitu variabel user
 def login(x):
     global logged
     global user
