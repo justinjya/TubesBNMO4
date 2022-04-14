@@ -7,6 +7,7 @@ def list_game_toko(y):
     # Inisialisasi temporary array kosong untuk meng-copy list data game
     temp = []
     # Mengisi temporary array dengan list data game
+    # y[i][0] yaitu game_id, y[i][1] yaitu nama, y[i][2], yaitu kategori, y[i][3] yaitu tahun rilis, y[i][4] yaitu harga, y[i][5] yaitu stok
     for i in range(length(y)):
         temp += [[y[i][0],y[i][1],y[i][2],y[i][3],y[i][4],y[i][5]]]
         
@@ -72,4 +73,5 @@ def list_game_toko(y):
         num[i] = i+1
     numSpaces(num)
     for i in range(length(temp)):
+        # temp[i][0] yaitu game_id, temp[i][1] yaitu nama, temp[i][2], yaitu kategori, temp[i][3] yaitu tahun rilis, temp[i][4] yaitu harga, temp[i][5] yaitu stok
         print(str(num[i]) + ' ' + temp[i][0] + ' | ' + temp[i][1] + ' | ' + temp[i][2] + ' | ' + temp[i][3] + ' | ' + temp[i][4] + ' | ' + temp[i][5])
