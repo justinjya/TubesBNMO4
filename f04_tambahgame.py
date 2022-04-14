@@ -1,5 +1,6 @@
 from .functions import*
 
+# Fungsi tambah_game menerima parameter x yaitu variabel game
 def tambah_game(x):
     global game
 
