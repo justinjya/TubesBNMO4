@@ -15,9 +15,10 @@ def list_game(x,y,z):
     for i in range(length(y)):
         if z == y[i][1]: # Validasi user_id yang sesuai dengan data kemepilikan
             count += 1 # Menambah jumlah indeks sesuai data kepemilikan sesuai 'user_id' dengan 1
-            temp += [y[i][0]]
+            temp += [y[i][0]] # y[i][0] yaitu game_id
     
     # Mengisi temporary array dengan game sesuai data 'game_id'
+    # x[i][0] yaitu game_id, x[i][1] yaitu nama, x[i][2], yaitu kategori, x[i][3] yaitu tahun rilis, x[i][4] yaitu harga
     for i in range(length(x)):
         for j in range(length(temp)):
             if temp[j] == x[i][0]:
@@ -35,4 +36,5 @@ def list_game(x,y,z):
             num[i] = i+1
         numSpaces(num)
         for i in range(length(tempo)):
+            # tempo[i][0] yaitu game_id, tempo[i][1] yaitu nama, tempo[i][2], yaitu kategori, tempo[i][3] yaitu tahun rilis, tempo[i][4] yaitu harga
             print(str(num[i]) + ' ' + tempo[i][0] + ' | ' + tempo[i][1] + ' | ' + tempo[i][2] + ' | ' + tempo[i][3] + ' | ' + tempo[i][4])
