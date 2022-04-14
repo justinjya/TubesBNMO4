@@ -14,18 +14,19 @@ def register(x):
     username = input('Masukkan username: ')
     password = input('Masukkan password: ')
 
-    # Validasi apakah username sudah dipakai atau belum
+    # Looping untuk validasi apakah username sudah dipakai atau belum
     for i in range(length(x)):
         if username == x[i][1]:
             print('Username', username, 'sudah terpakai, silahkan menggunakan username lain')
             break
     else:
-        count = 0
+        count = 0 # Inisialisasi panjang indeks username
         # Inisialisasi list untuk validasi karakter - karakter dalam username
         temp = [0 for i in range(length(username))]
         for i in range(length(username)):
             temp[i] = username[i]
-        # Validasi apakah username sudah sesuai kriteria
+            
+        # Looping untuk validasi apakah username sudah sesuai kriteria
         for i in range(length(username)):
             if length(username) < 5:
                 print('Username harus memiliki minimal 5 karakter')
@@ -34,7 +35,7 @@ def register(x):
                 # Validasi apakah karakter - karakter dalam username sudah sesuai kriteria
                 for i in range(length(username)):
                     if (temp[i] in big) or (temp[i] in small) or (temp[i] in simbol) or (temp[i] in nomor):
-                        count += 1
+                        count += 1 # Jika karakter dalam username sesuai dengan kriteria maka tambah jumlah username dengan 1
                 if count == length(username):
                     print('Username', username, 'telah berhasil register ke dalam "Binomo".')
                     temp = [length(x)+1, username, nama, password, 'user', 0]
