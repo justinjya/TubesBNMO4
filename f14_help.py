@@ -1,13 +1,16 @@
+# Fungsi help menerima parameter x dan y yaitu variabel logged dan role
 def help(x,y):
     global logged
     global role
-
+    
+    # Jika belum login
     if x == False:
         print('============ HELP ============')
         print('1. login - Untuk melakukan login ke dalam sistem')
         print('2. help - Untuk melihat daftar perintah yang dapat dijalankan program.')
         print('3. exit - Untuk keluar dari program.')
     else:
+        # Jika role yaitu admin
         if y == 'admin':
             print('============ HELP ============')
             print('1. register - Untuk melakukan registrasi user baru')
@@ -21,6 +24,8 @@ def help(x,y):
             print('9. save - Untuk menyimpan data ke dalam file setelah dilakukan perubahan.')
             print('10. help - Untuk melihat daftar perintah yang dapat dijalankan program.')
             print('11. exit - Untuk keluar dari program.')
+            
+        # Jika role yaitu user
         elif y == 'user':
             print('============ HELP ============')
             print('1. login - Untuk melakukan login ke dalam sistem')
