@@ -1,18 +1,23 @@
 from .functions import*
 
+# Fungsi search_game_at_store menerima parameter x yaitu variabel game
 def search_game_at_store(x):
     global game
 
+    # Input id, nama, harga, kategori, dan tahun rilis
     id = input('Masukkan ID Game: ')
     nama = input('Masukkan Nama Game: ')
     harga = str(input('Masukkan Harga Game: '))
     kategori = str(input('Masukkan Kategori Game: '))
     tahun_rilis = str(input('Masukkan Tahun Rilis Game: '))
+    
+    # Inisialisasi temporary array dan kondisi awal found
     temp = []
     found = False
 
     print("Daftar game pada toko yang memenuhi kriteria:")
 
+    # Mengisi temporary array dengan data dalam game sesuai input id, nama, harga, kategori, dan tahun rilis
     for i in range(length(x)):
         if id == '' or nama == '' or harga == '' or kategori == '' or tahun_rilis == '':
             if id == x[i][0]:
@@ -31,6 +36,7 @@ def search_game_at_store(x):
                 found = True
                 temp += [[x[i][0],x[i][1],x[i][4],x[i][2],tahun_rilis,x[i][5]]]
 
+    # Output daftar game pada toko sesuai kriteria
     if found == False:
         print('Tidak ada game yang memenuhi kriteria.')
     else:
