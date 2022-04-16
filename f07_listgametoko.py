@@ -59,10 +59,10 @@ def list_game_toko(y):
                 else:
                     # Selain atribut 'id', diurutinnya manual berdasarkan angka
                     if x == '-':
-                        if (int(temp[ekstrim][n]) < int(temp[j][n])):
+                        if (int(temp[ekstrim][n]) > int(temp[j][n])):
                             temp[i], temp[j] = temp[j], temp[i]
                     elif x == '+':
-                        if (int(temp[ekstrim][n]) > int(temp[j][n])):
+                        if (int(temp[ekstrim][n]) < int(temp[j][n])):
                             temp[i], temp[j] = temp[j], temp[i]
                             
     # Output list yang sudah diurutkan sesuai atribut
