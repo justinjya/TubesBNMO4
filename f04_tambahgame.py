@@ -1,9 +1,7 @@
 from .functions import*
 
-# Fungsi tambah_game menerima parameter x yaitu variabel game
-def tambah_game(x):
-    global game
-
+# Fungsi tambah_game menerima parameter yaitu variabel game
+def tambah_game(game):
     # Input nama, kategori, tahun rilis, harga, dan stok game
     nama = input('Masukkan nama game: ')
     kategori = input('Masukkan kategori: ')
@@ -22,5 +20,5 @@ def tambah_game(x):
     else:
         # Menambah semua inputan kedalam data
         print('Selamat! Berhasil menambahkan game', nama)
-        temp = ['G'+str(int(length(x))+1), nama, kategori, str(tahun_rilis), str(harga), str(stok)]
-        x += [temp]
+        temp = ['G'+str(int(length(game))+1), nama, kategori, str(tahun_rilis), str(harga), str(stok)]
+        game += [temp]
