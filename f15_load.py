@@ -12,7 +12,7 @@ def load():
         if length(sys.argv) == 1:
             print('Tidak ada nama folder yang diberikan.')
         args = parser.parse_args()
-        folder = args.folder
+        folder = './saves/' + args.folder
         if not os.path.exists(folder):
             return print('Folder',folder,'tidak ditemukan.')
 
