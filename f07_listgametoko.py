@@ -1,15 +1,13 @@
 from .functions import*
 
-# Fungsi list_game_toko menerima parameter y yaitu variabel game
-def list_game_toko(y):
-    global game
-
+# Fungsi list_game_toko menerima parameter yaitu variabel game
+def list_game_toko(game):
     # Inisialisasi temporary array kosong untuk meng-copy list data game
     temp = []
     # Mengisi temporary array dengan list data game
-    # y[i][0] yaitu game_id, y[i][1] yaitu nama, y[i][2], yaitu kategori, y[i][3] yaitu tahun rilis, y[i][4] yaitu harga, y[i][5] yaitu stok
-    for i in range(length(y)):
-        temp += [[y[i][0],y[i][1],y[i][2],y[i][3],y[i][4],y[i][5]]]
+    # y[i][0] yaitu game_id, game[i][1] yaitu nama, game[i][2] yaitu kategori, game[i][3] yaitu tahun rilis, game[i][4] yaitu harga, game[i][5] yaitu stok
+    for i in range(length(game)):
+        temp += [[game[i][0],game[i][1],game[i][2],game[i][3],game[i][4],game[i][5]]]
         
     # Input skema sorting dan melakukan sorting
     skema = input('Skema sorting : ')
