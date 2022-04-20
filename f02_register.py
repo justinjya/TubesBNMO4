@@ -1,17 +1,15 @@
 from .functions import*
 
 # Fungsi register menerima parameter x yaitu variabel user
-def register(x):
-    global user
-
+def register(user):
     # Input nama, username, dan password
     nama = input('Masukkan nama: ')
     username = input('Masukkan username: ')
     password = input('Masukkan password: ')
 
     # Looping untuk validasi apakah username sudah dipakai atau belum
-    for i in range(length(x)):
-        if username == x[i][1]:
+    for i in range(length(user)):
+        if username == user[i][1]:
             print('Username', username, 'sudah terpakai, silahkan menggunakan username lain')
             break
     else:
@@ -31,8 +29,8 @@ def register(x):
                         count += 1 # Jika karakter dalam username sesuai dengan kriteria maka tambah jumlah username dengan 1
                 if count == length(username):
                     print('Username', username, 'telah berhasil register ke dalam "Binomo".')
-                    temp = [length(x)+1, username, nama, password, 'user', 0]
-                    x += [temp]
+                    temp = [length(user)+1, username, nama, password, 'user', 0]
+                    user += [temp]
                     break
                 else:
                     print('Username hanya dapat mengandung huruf besar, huruf kecil, angka 0-9, underscore "_", dan strip "_"')
