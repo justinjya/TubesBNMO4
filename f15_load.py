@@ -14,7 +14,7 @@ def load():
         args = parser.parse_args()
         folder = './saves/' + args.folder
         if not os.path.exists(folder):
-            return print('Folder',folder,'tidak ditemukan.')
+            return print('Folder',args.folder,'tidak ditemukan.')
 
         print('Loading...')
 
