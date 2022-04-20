@@ -1,9 +1,7 @@
 from .functions import*
 
-# Fungsi ubah_game menerima parameter x yaitu varibel game
-def ubah_game(x):
-    global game
-
+# Fungsi ubah_game menerima parameter yaitu varibel game
+def ubah_game(game):
     # Input id, nama, kategori, tahun rilis, harga
     id = input('Masukkan ID game: ')
     nama = input('Masukkan nama game: ')
@@ -12,14 +10,14 @@ def ubah_game(x):
     harga = input('Masukkan harga: ')
 
     # Looping untuk mencari id apakah terdaftar dalam data
-    for i in range(length(x)):
-        if id == x[i][0]:
+    for i in range(length(game)):
+        if id == game[i][0]:
             # Jika id terdaftar, maka merubah data sesuai input
             if nama != '':
-                x[i][1] = nama
+                game[i][1] = nama
             if kategori != '':
-                x[i][2] = kategori
+                game[i][2] = kategori
             if tahun_rilis != '':
-                x[i][3] = str(tahun_rilis)
+                game[i][3] = str(tahun_rilis)
             if harga != '':
-                x[i][4] = str(harga)
+                game[i][4] = str(harga)
