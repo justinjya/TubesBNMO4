@@ -1,6 +1,6 @@
 from .functions import*
 
-# Fungsi register menerima parameter x yaitu variabel user
+# Fungsi register menerima parameter yaitu variabel user
 def register(user):
     # Input nama, username, dan password
     nama = input('Masukkan nama: ')
