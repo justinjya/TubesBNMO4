@@ -1,11 +1,7 @@
 from .functions import*
 
 def load():
-    global user
-    global game
-    global kepemilikan
-    global history
-
+    # Inisialisasi parser dalam argparse untuk membaca isi folder
     while True:
         parser = argparse.ArgumentParser(prog = 'Load')
         parser.add_argument('folder', type = str)
@@ -18,6 +14,7 @@ def load():
 
         print('Loading...')
 
+        # Membuka, membaca, dan mengubah file csv menjadi sebuah array
         user = opencsv(folder,'user.csv')
         game = opencsv(folder,'game.csv')
         kepemilikan = opencsv(folder,'kepemilikan.csv')
