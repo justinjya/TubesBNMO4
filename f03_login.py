@@ -1,22 +1,18 @@
 from .functions import*
 
 # Fungsi login menerima parameter x yaitu variabel user
-def login(x):
-    global logged
-    global user
-    global user_id
-    global role
+def login(user):
     # Input username dan password
     username_login = input('Masukkan username: ')
     password_login = input('Masukkan password: ')
 
     # Looping untuk validasi apakah username dan password sesuai dengan data
-    for i in range(length(x)):
-        if username_login == x[i][1] and password_login == x[i][3]:
-            print('Halo ' + x[i][2] + '! Selamat datang di "Binomo".')
+    for i in range(length(user)):
+        if username_login == user[i][1] and password_login == user[i][3]:
+            print('Halo ' + user[i][2] + '! Selamat datang di "Binomo".')
             logged = True
-            user_id = x[i][0]
-            role = x[i][4]
+            user_id = user[i][0]
+            role = user[i][4]
             return logged, user_id, role
     else:
         logged = False
