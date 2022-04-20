@@ -1,11 +1,7 @@
 from .functions import*
 
-# Fungsi search_my_game menerima parameter x, y, dan z yaitu variabel game, kepemilikan, dan user_id
-def search_my_game(x,y,z):
-    global game
-    global kepemilikan
-    global user_id
-
+# Fungsi search_my_game menerima parameter yaitu variabel game, kepemilikan, dan user_id
+def search_my_game(game,kepemilikan,user_id):
     # Input id game dan tahun rilis
     id = input("Masukkan ID Game: ")
     tahun_rilis = input("Masukkan Tahun Rilis Game: ")
@@ -17,16 +13,16 @@ def search_my_game(x,y,z):
     tempor = []
 
     # Mengisi temporary array 'temp' dengan data 'game_id' dalam kepemilikan
-    for i in range(length(y)):
-        if z == y[i][1]:
-            temp += [y[i][0]] # y[i][0] yaitu game_id
+    for i in range(length(kepemilikan)):
+        if user_id == kepemilikan[i][1]:
+            temp += [kepemilikan[i][0]] # kepemilikan[i][0] yaitu game_id
 
     # Mengisi temporary array 'tempo' dengan data game sesuai 'game_id' dalam 'temp'
-    # x[i][0] yaitu game_id, x[i][1] yaitu nama, x[i][2], yaitu kategori, x[i][3] yaitu tahun rilis, x[i][4] yaitu harga
-    for i in range(length(x)):
+    # game[i][0] yaitu game_id, game[i][1] yaitu nama, game[i][2] yaitu kategori, game[i][3] yaitu tahun rilis, game[i][4] yaitu harga
+    for i in range(length(game)):
         for j in range(length(temp)):
-            if temp[j] == x[i][0]:
-                    tempo += [[x[i][0],x[i][1],x[i][4],x[i][2],x[i][3]]]
+            if temp[j] == game[i][0]:
+                    tempo += [[game[i][0],game[i][1],game[i][4],game[i][2],game[i][3]]]
 
     # Mengisi temporary array 'tempor' dengan data dalam 'temp' sesuai input id atau tahun rilis
     # tempo[i][0] yaitu game_id, tempo[i][1] yaitu nama, tempo[i][2], yaitu kategori, tempo[i][3] yaitu tahun rilis, tempo[i][4] yaitu harga
