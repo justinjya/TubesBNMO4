@@ -1,6 +1,6 @@
 from .functions import*
 
-# Fungsi ubah_stok menerima parameter x yaitu varriabel game
+# Fungsi ubah_stok menerima parameter yaitu varriabel game
 def ubah_stok(game):
     # Input id game
     id = input('Masukkan ID Game: ')
