@@ -11,7 +11,7 @@ def save(x,y,z,w):
     kepemilikan = arraytocsv(z)
     history = arraytocsv(w)
 
-    dir = './'
+    dir = './saves/'
     os.chdir(dir)
     print('Disarankan : ' + str(datetime.today().replace(microsecond=0)))
     folder = input('Masukan nama folder penyimpanan: ')
