@@ -1,19 +1,16 @@
 from .functions import*
 
-# Fungsi riwayat menerima parameter x dan y yaitu variabel history dan user_id
-def riwayat(x,y):
-    global history
-    global user_id
-
+# Fungsi riwayat menerima parameter yaitu variabel history dan user_id
+def riwayat(history,user_id):
     # Inisialisasi temporary array
     temp = []
     # Mengisi temporary array dengan elemen history
-    # x[i][0] yaitu game_id, x[i][1] yaitu nama, x[i][2], yaitu kategori, x[i][3] yaitu tahun rilis, x[i][4] yaitu harga
-    for i in range(length(x)):
-        if y == x[i][3]:
-            temp += [[x[i][0],x[i][1],x[i][2],x[i][4]]]
+    # history[i][0] yaitu game_id, history[i][1] yaitu nama, history[i][2] yaitu kategori, history[i][3] yaitu tahun rilis, history[i][4] yaitu harga
+    for i in range(length(history)):
+        if user_id == history[i][3]:
+            temp += [[history[i][0],history[i][1],history[i][2],history[i][4]]]
 
-    if length(x) == 0: # Jika tidk memiliki game
+    if length(history) == 0: # Jika tidk memiliki game
         print('Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah "buy_game" untuk membeli.')
     else:
         for i in range(length(x[0])):
