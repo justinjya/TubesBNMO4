@@ -1,15 +1,10 @@
 from .functions import*
 
-def save(x,y,z,w):
-    global user
-    global game
-    global kepemilikan
-    global history
-
-    user = arraytocsv(x)
-    game = arraytocsv(y)
-    kepemilikan = arraytocsv(z)
-    history = arraytocsv(w)
+def save(user,game,kepemilikan,history):
+    user = arraytocsv(user)
+    game = arraytocsv(game)
+    kepemilikan = arraytocsv(kepemilikan)
+    history = arraytocsv(history)
 
     dir = './saves/'
     os.chdir(dir)
