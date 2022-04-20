@@ -1,6 +1,6 @@
 from .functions import*
 
-# Fungsi login menerima parameter x yaitu variabel user
+# Fungsi login menerima parameter yaitu variabel user
 def login(user):
     # Input username dan password
     username_login = input('Masukkan username: ')
