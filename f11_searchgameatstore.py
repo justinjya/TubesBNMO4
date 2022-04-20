@@ -1,9 +1,7 @@
 from .functions import*
 
-# Fungsi search_game_at_store menerima parameter x yaitu variabel game
-def search_game_at_store(x):
-    global game
-
+# Fungsi search_game_at_store menerima parameter yaitu variabel game
+def search_game_at_store(game):
     # Input id, nama, harga, kategori, dan tahun rilis
     id = input('Masukkan ID Game: ')
     nama = input('Masukkan Nama Game: ')
@@ -18,24 +16,24 @@ def search_game_at_store(x):
     print("Daftar game pada toko yang memenuhi kriteria:")
 
     # Mengisi temporary array dengan data dalam game sesuai input id, nama, harga, kategori, dan tahun rilis
-    # x[i][0] yaitu game_id, x[i][1] yaitu nama, x[i][2], yaitu kategori, x[i][3] yaitu tahun rilis, x[i][4] yaitu harga, x[i][5] yaitu stok
-    for i in range(length(x)):
+    # game[i][0] yaitu game_id, game[i][1] yaitu nama, game[i][2] yaitu kategori, game[i][3] yaitu tahun rilis, game[i][4] yaitu harga, game[i][5] yaitu stok
+    for i in range(length(game)):
         if id == '' or nama == '' or harga == '' or kategori == '' or tahun_rilis == '':
-            if id == x[i][0]:
+            if id == game[i][0]:
                 found = True
-                temp += [[id,x[i][1],x[i][4],x[i][2],x[i][3],x[i][5]]]
-            elif nama == x[i][1]:
+                temp += [[id,game[i][1],game[i][4],game[i][2],game[i][3],game[i][5]]]
+            elif nama == game[i][1]:
                 found = True
-                temp += [[x[i][0],nama,x[i][4],x[i][2],x[i][3],x[i][5]]]
-            elif harga == x[i][4]:
+                temp += [[game[i][0],nama,game[i][4],game[i][2],game[i][3],game[i][5]]]
+            elif harga == game[i][4]:
                 found = True
-                temp += [[x[i][0],x[i][1],harga,x[i][2],x[i][3],x[i][5]]]
-            elif kategori == x[i][2]:
+                temp += [[game[i][0],game[i][1],harga,game[i][2],game[i][3],game[i][5]]]
+            elif kategori == game[i][2]:
                 found = True
-                temp += [[x[i][0],x[i][1],x[i][4],kategori,x[i][3],x[i][5]]]
-            elif tahun_rilis == x[i][3]:
+                temp += [[game[i][0],game[i][1],game[i][4],kategori,game[i][3],game[i][5]]]
+            elif tahun_rilis == game[i][3]:
                 found = True
-                temp += [[x[i][0],x[i][1],x[i][4],x[i][2],tahun_rilis,x[i][5]]]
+                temp += [[game[i][0],game[i][1],game[i][4],game[i][2],tahun_rilis,game[i][5]]]
 
     # Output daftar game pada toko sesuai kriteria
     if found == False:
