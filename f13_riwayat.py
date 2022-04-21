@@ -10,7 +10,7 @@ def riwayat(history,user_id):
         if user_id == history[i][3]:
             temp += [[history[i][0],history[i][1],history[i][2],history[i][4]]]
 
-    if length(history) == 0: # Jika tidk memiliki game
+    if length(temp) == 0: # Jika tidk memiliki game
         print('Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah "buy_game" untuk membeli.')
     else:
         for i in range(length(x[0])):
