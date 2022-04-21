@@ -27,6 +27,10 @@ while True :
                 func.help(logged,role)
             elif inpt == 'save':
                 func.save(user,game,kepemilikan,history)
+            elif inpt == 'kerangajaib':
+                func.kerangajaib()
+            elif inpt == 'tictactoe':
+                func.tictactoe()
             elif inpt == 'exit':
                 func.exit(user,game,kepemilikan,history)
                 break
@@ -51,6 +55,10 @@ while True :
                 func.help(logged,role)
             elif inpt == 'save':
                 func.save(user,game,kepemilikan,history)
+            elif inpt == 'kerangajaib':
+                func.kerangajaib()
+            elif inpt == 'tictactoe':
+                func.tictactoe()
             elif inpt == 'exit':
                 func.exit(user,game,kepemilikan,history)
                 break
@@ -62,6 +70,10 @@ while True :
         elif inpt == 'help':
             func.help(logged,role)
         elif inpt == 'exit':
-                func.exit(user,game,kepemilikan,history)
+            func.exit(user,game,kepemilikan,history)
+        elif inpt == 'kerangajaib':
+            func.kerangajaib()
+        elif inpt == 'tictactoe':
+            func.tictactoe()
         else:
             print('Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain "login" dan "help".')
