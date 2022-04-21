@@ -35,3 +35,8 @@ def help(logged,role):
             print('8. save - Untuk menyimpan data ke dalam file setelah dilakukan perubahan.')
             print('9. help - Untuk melihat daftar perintah yang dapat dijalankan program.')
             print('10. exit - Untuk keluar dari program.')
+            
+    # Untuk permainan bonus
+    print('============ BONUS ============')
+    print('1. kerangajaib - Untuk mencari jawaban dari pertanyaan kamu.')
+    print('2. tictactoe - Untuk bermain tictactoe')
