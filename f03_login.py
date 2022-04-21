@@ -5,10 +5,11 @@ def login(user):
     # Input username dan password
     username_login = input('Masukkan username: ')
     password_login = input('Masukkan password: ')
-
+    
+    temp = cipher(password_login)
     # Looping untuk validasi apakah username dan password sesuai dengan data
     for i in range(length(user)):
-        if username_login == user[i][1] and password_login == user[i][3]:
+        if username_login == user[i][1] and temp == user[i][3]:
             print('Halo ' + user[i][2] + '! Selamat datang di "Binomo".')
             logged = True
             user_id = user[i][0]
