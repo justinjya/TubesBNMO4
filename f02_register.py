@@ -29,7 +29,7 @@ def register(user):
                         count += 1 # Jika karakter dalam username sesuai dengan kriteria maka tambah jumlah username dengan 1
                 if count == length(username):
                     print('Username', username, 'telah berhasil register ke dalam "Binomo".')
-                    temp = [length(user)+1, username, nama, password, 'user', 0]
+                    temp = [length(user)+1, username, nama, cipher(password), 'user', 0]
                     user += [temp]
                     break
                 else:
