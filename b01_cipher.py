@@ -2,7 +2,9 @@ from .functions import*
 
 # Cipher yang digunakan adalah Caesar Cipher dengan key +6
 def cipher(password):
-    temp = [ord(i) for i in password]
+    temp = []
+    for i in range(length(password)):
+        temp += [ord(password[i])]
     for i in range(length(temp)):
         temp[i] = chr((temp[i] + 5 - 97) % 26 + 97)
     ciphered = ''
@@ -11,10 +13,12 @@ def cipher(password):
     return ciphered
 
 def uncipher(password):
-    temp = [ord(i) for i in password]
+    temp = []
+    for i in range(length(password)):
+        temp += [ord(password[i])]
     for i in range(length(temp)):
         temp[i] = chr((temp[i] - 5 - 97) % 26 + 97)
-    unciphered = ''
+    ciphered = ''
     for i in range(length(temp)):
-        unciphered += temp[i]
-    return unciphered
+        ciphered += temp[i]
+    return ciphered
