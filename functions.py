@@ -3,18 +3,21 @@ import sys
 import argparse
 from datetime import datetime
 
+# Untuk menggantikan fungsi len()
 def length(x):
     index = 0
     for i in x:
         index += 1
     return int(index)
 
+# Untuk mengetahui jumlah baris dalam suatu file
 def rows(folder,file):
     f = open('./'+ folder + '/' + file, 'r')
     line = f.readlines()
     row =  length(line) - 1
     return int(row)
 
+# Untuk membuka file csv dan mengubahnya menjadi array
 def opencsv(folder,file):
     if file == 'user.csv' or file == 'game.csv':
         columns = 6
@@ -51,6 +54,7 @@ def opencsv(folder,file):
             break
     return newlis
 
+# Mengubah array menjadi string untuk disimpan ke file csv
 def arraytocsv(x):
     temp = ''
     for i in range(length(x)):
@@ -63,6 +67,7 @@ def arraytocsv(x):
                 temp += str(x[i][j]) + ';'
     return temp
 
+# Untuk mempercantik listing game
 def spaces(x,y):
     for i in range(length(x)):
             max = length(x[0][y])
