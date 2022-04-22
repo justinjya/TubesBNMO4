@@ -71,7 +71,7 @@ def arraytocsv(x):
 def spaces(x,y):
     for i in range(length(x)):
             max = length(x[0][y])
-            for i in range(len(x)):
+            for i in range(length(x)):
                 if length(x[i][y]) > max:
                     max = length(x[i][y])
     for i in range(length(x)):
