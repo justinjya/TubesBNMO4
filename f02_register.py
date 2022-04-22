@@ -15,7 +15,9 @@ def register(user):
     else:
         count = 0 # Inisialisasi panjang indeks username
         # Inisialisasi list untuk validasi karakter - karakter dalam username
-        temp = temp = [ord(i) for i in username]
+        temp = []
+        for i in range(length(username)):
+            temp += [ord(username[i])]
             
         # Looping untuk validasi apakah username sudah sesuai kriteria
         for i in range(length(username)):
