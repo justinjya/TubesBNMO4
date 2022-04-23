@@ -18,22 +18,21 @@ def search_game_at_store(game):
     # Mengisi temporary array dengan data dalam game sesuai input id, nama, harga, kategori, dan tahun rilis
     # game[i][0] yaitu game_id, game[i][1] yaitu nama, game[i][2] yaitu kategori, game[i][3] yaitu tahun rilis, game[i][4] yaitu harga, game[i][5] yaitu stok
     for i in range(length(game)):
-        if id == '' or nama == '' or harga == '' or kategori == '' or tahun_rilis == '':
-            if id == game[i][0]:
-                found = True
-                temp += [[id,game[i][1],game[i][4],game[i][2],game[i][3],game[i][5]]]
-            elif nama == game[i][1]:
-                found = True
-                temp += [[game[i][0],nama,game[i][4],game[i][2],game[i][3],game[i][5]]]
-            elif harga == game[i][4]:
-                found = True
-                temp += [[game[i][0],game[i][1],harga,game[i][2],game[i][3],game[i][5]]]
-            elif kategori == game[i][2]:
-                found = True
-                temp += [[game[i][0],game[i][1],game[i][4],kategori,game[i][3],game[i][5]]]
-            elif tahun_rilis == game[i][3]:
-                found = True
-                temp += [[game[i][0],game[i][1],game[i][4],game[i][2],tahun_rilis,game[i][5]]]
+        if id == game[i][0]:
+            found = True
+            temp += [[id,game[i][1],game[i][4],game[i][2],game[i][3],game[i][5]]]
+        elif nama == game[i][1]:
+            found = True
+            temp += [[game[i][0],nama,game[i][4],game[i][2],game[i][3],game[i][5]]]
+        elif harga == game[i][4]:
+            found = True
+            temp += [[game[i][0],game[i][1],harga,game[i][2],game[i][3],game[i][5]]]
+        elif kategori == game[i][2]:
+            found = True
+            temp += [[game[i][0],game[i][1],game[i][4],kategori,game[i][3],game[i][5]]]
+        elif tahun_rilis == game[i][3]:
+            found = True
+            temp += [[game[i][0],game[i][1],game[i][4],game[i][2],tahun_rilis,game[i][5]]]
 
     # Output daftar game pada toko sesuai kriteria
     if found == False:
