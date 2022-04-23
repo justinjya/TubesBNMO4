@@ -26,16 +26,13 @@ def search_my_game(game,kepemilikan,user_id):
 
     # Mengisi temporary array 'tempor' dengan data dalam 'temp' sesuai input id atau tahun rilis
     # tempo[i][0] yaitu game_id, tempo[i][1] yaitu nama, tempo[i][2], yaitu kategori, tempo[i][3] yaitu tahun rilis, tempo[i][4] yaitu harga
-    if id != '':
-        for i in range(length(tempo)):
-            if id == tempo[i][0]:
-                tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
-                found = True
-    if tahun_rilis != '':
-        for i in range(length(tempo)):
-            if tahun_rilis == tempo[i][4]:
-                tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
-                found = True
+    for i in range(length(tempo)):
+        if id == tempo[i][0]:
+            found = True
+            tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
+        if tahun_rilis == tempo[i][4]:
+            found = True
+            tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
                 
     print("Daftar game pada inventory yang memenuhi kriteria:")
     
