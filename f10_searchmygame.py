@@ -30,7 +30,7 @@ def search_my_game(game,kepemilikan,user_id):
         if id == tempo[i][0]:
             found = True
             tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
-        if tahun_rilis == tempo[i][4]:
+        elif tahun_rilis == tempo[i][4]:
             found = True
             tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
                 
