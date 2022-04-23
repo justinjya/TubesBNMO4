@@ -34,3 +34,6 @@ def save(user,game,kepemilikan,history):
     f.write('game_id;nama;harga;user_id;tahun_beli\n')
     f.writelines(history)
     f.close
+    
+    print('Saving...')
+    print('Data telah tersimpan pada folder', folder)
