@@ -12,30 +12,40 @@ def search_game_at_store(game):
     # Inisialisasi temporary array dan kondisi awal found
     temp = []
     found = False
-
-    print("Daftar game pada toko yang memenuhi kriteria:")
+    count = 0
 
     # Mengisi temporary array dengan data dalam game sesuai input id, nama, harga, kategori, dan tahun rilis
     # game[i][0] yaitu game_id, game[i][1] yaitu nama, game[i][2] yaitu kategori, game[i][3] yaitu tahun rilis, game[i][4] yaitu harga, game[i][5] yaitu stok
-    for i in range(length(game)):
-        if id == game[i][0]:
-            found = True
-            temp += [[id,game[i][1],game[i][4],game[i][2],game[i][3],game[i][5]]]
-        elif nama == game[i][1]:
-            found = True
-            temp += [[game[i][0],nama,game[i][4],game[i][2],game[i][3],game[i][5]]]
-        elif harga == game[i][4]:
-            found = True
-            temp += [[game[i][0],game[i][1],harga,game[i][2],game[i][3],game[i][5]]]
-        elif kategori == game[i][2]:
-            found = True
-            temp += [[game[i][0],game[i][1],game[i][4],kategori,game[i][3],game[i][5]]]
-        elif tahun_rilis == game[i][3]:
-            found = True
-            temp += [[game[i][0],game[i][1],game[i][4],game[i][2],tahun_rilis,game[i][5]]]
+    if id == '' and nama == '' and harga == '' and kategori == '' and tahun_rilis == '':
+        found = True
+        for i in range(length(game)):
+            temp += [[game[i][0],game[i][1],game[i][4],game[i][2],game[i][3],game[i][5]]]
+    else:
+        for i in range(length(game)):
+            if id == game[i][0]:
+                count += 1
+                found = True
+                temp += [[id,game[i][1],game[i][4],game[i][2],game[i][3],game[i][5]]]
+            elif nama == game[i][1]:
+                count += 1
+                found = True
+                temp += [[game[i][0],nama,game[i][4],game[i][2],game[i][3],game[i][5]]]
+            elif harga == game[i][4]:
+                count += 1
+                found = True
+                temp += [[game[i][0],game[i][1],harga,game[i][2],game[i][3],game[i][5]]]
+            elif kategori == game[i][2]:
+                count += 1
+                found = True
+                temp += [[game[i][0],game[i][1],game[i][4],kategori,game[i][3],game[i][5]]]
+            elif tahun_rilis == game[i][3]:
+                count += 1
+                found = True
+                temp += [[game[i][0],game[i][1],game[i][4],game[i][2],tahun_rilis,game[i][5]]]
 
     # Output daftar game pada toko sesuai kriteria
-    if found == False:
+    print("Daftar game pada toko yang memenuhi kriteria:")
+    if found == False or (found == True and count > 1):
         print('Tidak ada game yang memenuhi kriteria.')
     else:
         for i in range(length(temp[0])):
