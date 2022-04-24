@@ -10,7 +10,7 @@ def tambah_game(game):
     stok = input('Masukkan stok awal: ')
 
     # Melakukan pengulangan input nama, kategori, tahun rilis, harga, dan stok game jika inputan belum sesuai kriteria
-    while (nama != str and nama == '') and (kategori != str and kategori == '') and tahun_rilis != int and harga != int and stok != int:
+    while nama == '' or kategori == '' or tahun_rilis == '' or harga == '' or stok == '':
         print('Mohon masukkan semua informasi mengenai game agar dapat disimpan BNMO.')
         nama = input('Masukkan nama game: ')
         kategori = input('Masukkan kategori: ')
