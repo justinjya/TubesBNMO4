@@ -16,6 +16,9 @@ def gambarKotak(papan):
     print('')
 
 def tictactoe():
+    # Inisialisasi kondisi awal papan
+    papan = ['#','#','#','#','#','#','#','#','#']
+    
     gambarKotak(papan)
     count = 0 # Angka giliran
     simbol = ''
