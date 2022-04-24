@@ -10,7 +10,7 @@ def topup(user):
     for i in range(length(user)):
         if username == user[i][1]:
             # Validasi bahwa saldo akhir tidak bisa kurang dari 0
-            if tambah < 0 and abs(tambah) > user[i][5]:
+            if tambah < 0 and abs(tambah) > int(user[i][5]):
                 print('Masukan tidak valid')
             else:
                 # Mengubah saldo
