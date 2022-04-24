@@ -11,6 +11,7 @@ def search_my_game(game,kepemilikan,user_id):
     temp = []
     tempo  = []
     tempor = []
+    count = 0
 
     # Mengisi temporary array 'temp' dengan data 'game_id' dalam kepemilikan
     for i in range(length(kepemilikan)):
@@ -26,18 +27,26 @@ def search_my_game(game,kepemilikan,user_id):
 
     # Mengisi temporary array 'tempor' dengan data dalam 'temp' sesuai input id atau tahun rilis
     # tempo[i][0] yaitu game_id, tempo[i][1] yaitu nama, tempo[i][2], yaitu kategori, tempo[i][3] yaitu tahun rilis, tempo[i][4] yaitu harga
-    for i in range(length(tempo)):
-        if id == tempo[i][0]:
-            found = True
+    if id == '' and tahun_rilis == '':
+        found = True
+        for i in range(length(tempo)):
             tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
-        elif tahun_rilis == tempo[i][4]:
-            found = True
-            tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
-                
-    print("Daftar game pada inventory yang memenuhi kriteria:")
+    else:
+        for i in range(length(tempo)):
+            if id == tempo[i][0]:
+                count += 1
+                found = True
+                tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
+            elif tahun_rilis == tempo[i][4]:
+                count += 1
+                found = True
+                tempor += [[tempo[i][0],tempo[i][1],tempo[i][2],tempo[i][3],tempo[i][4]]]
     
     # Output daftar game yang dimiliki user sesuai kriteria
-    if found == True:
+    print("Daftar game pada inventory yang memenuhi kriteria:")
+    if found == False or (found == True and count > 1):
+        print('Tidak ada game pada inventory-mu yang memenuhi kriteria.')
+    else:
         for i in range(length(tempor[0])):
             spaces(tempor,i)
         num = [0 for i in range(length(tempor))]
@@ -47,5 +56,3 @@ def search_my_game(game,kepemilikan,user_id):
         for i in range(length(tempor)):
             # tempor[i][0] yaitu game_id, tempor[i][1] yaitu nama, tempor[i][2], yaitu kategori, tempor[i][3] yaitu tahun rilis, tempor[i][4] yaitu harga
             print(str(num[i]) + ' ' + tempor[i][0] + ' | ' + tempor[i][1] + ' | ' + tempor[i][2] + ' | ' + tempor[i][3] + ' | ' + tempor[i][4])
-    else:
-        print('Tidak ada game pada inventory-mu yang memenuhi kriteria.') # Jika input id dan tahun rilis kosong
