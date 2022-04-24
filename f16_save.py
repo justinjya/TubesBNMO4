@@ -9,28 +9,27 @@ def save(user,game,kepemilikan,history):
     history = arraytocsv(history)
 
     # Memasukkan nama folder penyimpanan file csv
-    dir = './saves/'
+    dir = './'
     os.chdir(dir)
-    print('Disarankan : ' + str(datetime.today().replace(microsecond=0)))
     folder = input('Masukan nama folder penyimpanan: ')
     
     if not os.path.exists(folder):
         os.mkdir(folder) # Membuat folder baru jika nama folder tidak ditemukan
 
     # Mengisi file csv
-    f = open(str(folder)+'/user.csv','w')
+    f = open('saves/' + str(folder) + '/user.csv','w')
     f.write('id;username;nama;password;role;saldo\n')
     f.writelines(user)
     f.close
-    f = open(str(folder)+'/game.csv','w')
+    f = open('saves/' + str(folder) + '/game.csv','w')
     f.write('id;nama;kategori;tahun_rilis;harga;stok\n')
     f.writelines(game)
     f.close
-    f = open(str(folder)+'/kepemilikan.csv','w')
+    f = open('saves/' + str(folder) + '/kepemilikan.csv','w')
     f.write('game_id;user_id\n')
     f.writelines(kepemilikan)
     f.close
-    f = open(str(folder)+'/riwayat.csv','w')
+    f = open('saves/' + str(folder) + '/riwayat.csv','w')
     f.write('game_id;nama;harga;user_id;tahun_beli\n')
     f.writelines(history)
     f.close
