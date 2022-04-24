@@ -10,7 +10,7 @@ def ubah_stok(game):
         if id == game[i][0]:
             # Input perubahan stok
             tambah = int(input('Masukkan jumlah: '))
-            if tambah < 0 and abs(tambah) > game[i][5]: # Validasi bahwa hasil akhir stok tidak bisa kurang dari 0
+            if tambah < 0 and abs(tambah) > int(game[i][5]): # Validasi bahwa hasil akhir stok tidak bisa kurang dari 0
                 print('Stok game',game[i][1],'gagal dikurangi karena stok kurang. Stok sekarang:',game[i][5], '(<',abs(tambah),')')
             else:
                 # Menambah stok
